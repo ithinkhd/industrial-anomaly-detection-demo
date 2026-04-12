@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+.venv/
+
+# YOLO outputs
+runs/
+
+# Models
+*.pt
+
+# OS files
+.DS_Store
+Thumbs.db

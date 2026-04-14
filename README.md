@@ -12,21 +12,41 @@ The system integrates:
 ---
 
 ## ⚙️ System Pipeline
-Input Image
-↓
-YOLO Object Detection
-↓
-Region Cropping
-↓
-Feature Extraction
-↓
-Memory Bank Comparison
-↓
-Anomaly Scoring
-↓
-Visualization (Bounding Box + Score)
+
+The system follows a hybrid industrial inspection workflow combining object detection and feature-based anomaly scoring.
+
+![System Pipeline](assets/Pipeline/System_Pipeline.png)
 
 ---
+
+### 1. Object Detection (YOLO)
+A pretrained/custom YOLO model is used to locate the screw within the image. The detection with the highest confidence score is selected.
+
+### 2. Region Cropping
+The detected bounding box is used to extract the Region of Interest (ROI), focusing only on the screw surface.
+
+### 3. Preprocessing
+The cropped image is standardized through resizing and normalization to reduce lighting and scale variations.
+
+### 4. Feature Extraction
+A feature vector is extracted from the ROI using a lightweight PatchCore-inspired approach (or feature-based representation).
+
+### 5. Memory Bank Comparison
+The extracted feature is compared against a memory bank built from normal (defect-free) samples.
+
+### 6. Anomaly Scoring
+A similarity/distance-based score is computed. Higher values indicate higher deviation from normal patterns.
+
+### 7. Classification
+A threshold is applied to classify the result as:
+- NORMAL
+- ANOMALY
+
+### 8. Visualization
+The final output displays:
+- Bounding box around detected screw
+- Anomaly label
+- Confidence/anomaly score
 
 ## 🧠 Key Features
 - Real-time object detection using YOLO

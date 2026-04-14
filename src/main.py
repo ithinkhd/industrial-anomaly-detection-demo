@@ -39,7 +39,7 @@ for file in os.listdir("C:\\Anomaly Detection\\industrial-anomaly-detection-demo
 
     x1, y1, x2, y2 = box
 
-    label = "ANOMALY" if score > 0.3 else "NORMAL"
+    label = "ANOMALY" if score > 0.75 else "NORMAL"
 
     cv2.rectangle(original, (x1, y1), (x2, y2),
                   (0, 0, 255) if label == "ANOMALY" else (0, 255, 0), 2)

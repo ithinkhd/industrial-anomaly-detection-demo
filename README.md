@@ -62,7 +62,7 @@ Example outputs:
 
 The following results were automatically generated using Python inference pipeline:
 ![Sample 1](assets/sample_results/sample_1.jpg)
-![Sample 2](assets/sample_results/sample_\2.jpg)
+![Sample 2](assets/sample_results/sample_2.jpg)
 ---
 
 ## ⚠️ Limitations & Future Improvements

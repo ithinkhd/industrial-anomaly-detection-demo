@@ -1,7 +1,8 @@
 from ultralytics import YOLO
 import cv2
 
-model = YOLO("C:\\Anomaly Detection\\runs\\detect\\yolo11n_anomaly3\\weights\\best.pt")  #for more specific items/product, can consider using trained model (best.pt)
+# for more specific items/product, can consider using trained model (best.pt)
+model = YOLO("C:\\Anomaly Detection\\runs\\detect\\yolo11n_anomaly3\\weights\\best.pt")  # Change Own PATH
 
 def detect_and_crop(image_path):
     img = cv2.imread(image_path)

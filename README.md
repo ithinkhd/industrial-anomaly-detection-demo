@@ -1,7 +1,7 @@
 # 🔍 Industrial Anomaly Detection System (YOLO + PatchCore-Inspired)
 
 ## 📌 Overview
-This project demonstrates an end-to-end industrial visual inspection pipeline for detecting surface defects on screws using a hybrid AI approach.
+This project demonstrates an end-to-end industrial visual inspection pipeline for detecting defects on screws using a hybrid AI approach.
 
 The system integrates:
 - YOLO-based object detection for region localization
@@ -23,7 +23,7 @@ The system follows a hybrid industrial inspection workflow combining object dete
 A pretrained/custom YOLO model is used to locate the screw within the image. The detection with the highest confidence score is selected.
 
 ### 2. Region Cropping
-The detected bounding box is used to extract the Region of Interest (ROI), focusing only on the screw surface.
+The detected bounding box is used to extract the Region of Interest (ROI), focusing only on the screw.
 
 ### 3. Preprocessing
 The cropped image is standardized through resizing and normalization to reduce lighting and scale variations.

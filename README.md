@@ -63,6 +63,7 @@ The final output displays:
 - Ultralytics YOLO
 - Scikit-learn
 - NumPy
+- Custom PatchCore
 
 ---
 
